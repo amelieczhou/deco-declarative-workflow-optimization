@@ -1,5 +1,5 @@
 Dependencies:
-This code requries boost 1.50 library. Please have it installed and link it properly in the makefile. 
+This code requries the boost 1.50 library. Please have it installed and link it properly in the makefile. 
 
 
 This code is preliminary and mainly for experimental purpose. 
