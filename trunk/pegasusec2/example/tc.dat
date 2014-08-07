@@ -1,0 +1,36 @@
+# This is the transformation catalog. It lists information about each of the
+# executables that are used by the workflow.
+
+tr preprocess {
+    site PegasusVM1 {
+        pfn "/home/zhouchi/experiment/bin/preprocess"
+        arch "x86_64"
+        os "linux"
+	instancetype "m1large"
+        type "INSTALLED"
+	profile pegasus "runtime" "30"
+#	runtime "30"
+    }
+}
+
+tr findrange {
+    site PegasusVM2 {
+        pfn "/home/zhouchi/experiment/bin/findrange"
+        arch "x86_64"
+        os "linux"
+	instancetype "m1medium"
+        type "INSTALLED"
+	profile pegasus "runtime" "20"
+#	runtime "20"
+    }
+}
+
+#tr analyze {
+#    site PegasusVM {
+#        pfn "/home/zhouchi/experiment/bin/analyze"
+#        arch "x86_64"
+#        os "linux"
+#	instancetype "m1large"
+#        type "INSTALLED"
+#    }
+#}
