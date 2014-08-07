@@ -1,0 +1,165 @@
+2014.08.07 15:29:10.004 SGT: [INFO]  Planner invoked with following arguments --conf pegasusrc -d pipe.dax --dir submit --force --sites PegasusVM1,PegasusVM2 -o local --nocleanup -vvv  
+2014.08.07 15:29:10.006 SGT: [DEBUG]  All sites will be loaded from the site catalog 
+2014.08.07 15:29:10.012 SGT: [DEBUG]  Retrieving Metadata from the file sites.xml 
+2014.08.07 15:29:10.093 SGT: [DEBUG]  Site Catalog Schema Version as determined from catalog file 4.0 
+2014.08.07 15:29:10.093 SGT: [CONFIG]  Site Catalog Parser Class to be loaded is SiteCatalogXMLParser4 
+2014.08.07 15:29:10.096 SGT: [CONFIG]  Picking schema /home/zhouchi/pegasus-source-4.3.2/share/pegasus/schema/sc-4.0.xsd 
+2014.08.07 15:29:10.097 SGT: [DEBUG] event.pegasus.parse.site-catalog site-catalog.id sites.xml  - STARTED 
+2014.08.07 15:29:10.257 SGT: [DEBUG]  Loading site in SiteStore local 
+2014.08.07 15:29:10.259 SGT: [DEBUG]  Loading site in SiteStore PegasusVM1 
+2014.08.07 15:29:10.261 SGT: [DEBUG]  Loading site in SiteStore PegasusVM2 
+2014.08.07 15:29:10.262 SGT: [DEBUG]  End of last element </sitecatalog> reached  
+2014.08.07 15:29:10.263 SGT: [DEBUG]  Object constructed is 	<site  handle="PegasusVM1" arch="x86_64" os="LINUX" instancetype="m1large" osrelease="" osversion="" glibc="">
+		<directory  type="shared-scratch">
+			<file-server protocol="scp" url="scp://127.0.0.1" mount-point="/home/tutorial/work" operation="all"/>
+			<internal-mount-point mount-point="/home/zhouchi/experiment/work" free-size="" total-size=""/>
+		</directory>
+		<profile namespace="env" key="PEGASUS_HOME" >/home/zhouchi/pegasus-source-4.3.2/bin</profile>
+		<profile namespace="condor" key="universe" >vanilla</profile>
+		<profile namespace="pegasus" key="style" >condor</profile>
+	</site>
+	<site  handle="PegasusVM2" arch="x86_64" os="LINUX" instancetype="m1medium" osrelease="" osversion="" glibc="">
+		<directory  type="shared-scratch">
+			<file-server protocol="scp" url="scp://155.69.149.43" mount-point="/home/zhouchi/experiment/work" operation="all"/>
+			<internal-mount-point mount-point="/home/zhouchi/experiment/work" free-size="" total-size=""/>
+		</directory>
+		<profile namespace="env" key="PEGASUS_HOME" >/home/zhouchi/pegasus-source-4.3.2/bin</profile>
+		<profile namespace="condor" key="universe" >vanilla</profile>
+		<profile namespace="pegasus" key="style" >condor</profile>
+	</site>
+	<site  handle="local" arch="x86_64" os="LINUX" instancetype="m1large" osrelease="" osversion="" glibc="">
+		<directory  type="shared-scratch">
+			<file-server protocol="file" url="file://" mount-point="/home/zhouchi/experiment/run" operation="all"/>
+			<internal-mount-point mount-point="/home/zhouchi/experiment/run" free-size="" total-size=""/>
+		</directory>
+		<directory  type="local-storage">
+			<file-server protocol="file" url="file://" mount-point="/home/zhouchi/experiment/outputs" operation="all"/>
+			<internal-mount-point mount-point="/home/zhouchi/experiment/outputs" free-size="" total-size=""/>
+		</directory>
+	</site>
+</sitecatalog>
+ 
+2014.08.07 15:29:10.263 SGT: [DEBUG] event.pegasus.parse.site-catalog site-catalog.id sites.xml  (0.166 seconds) - FINISHED 
+2014.08.07 15:29:10.264 SGT: [DEBUG]  Sites loaded are [PegasusVM1, PegasusVM2, local] 
+2014.08.07 15:29:10.264 SGT: [DEBUG]  Execution sites are         [PegasusVM1, PegasusVM2] 
+2014.08.07 15:29:10.269 SGT: [CONFIG]  TC Mode being used is Multiline Textual TC 
+2014.08.07 15:29:10.269 SGT: [CONFIG]  TC File being used is tc.dat 
+2014.08.07 15:29:10.276 SGT: [DEBUG]  Transformation Catalog Entry parsed is - 
+ 
+ Logical Namespace : null
+ Logical Name      : preprocess
+ Version           : null
+ Resource Id       : PegasusVM1
+ Physical Name     : /home/zhouchi/experiment/bin/preprocess
+ SysInfo           : {arch=x86_64 os=LINUX instancetype=m1large}
+ TYPE              : INSTALLED
+ Notifications:  
+2014.08.07 15:29:10.276 SGT: [DEBUG]  Transformation Catalog Entry parsed is - 
+ 
+ Logical Namespace : null
+ Logical Name      : findrange
+ Version           : null
+ Resource Id       : PegasusVM2
+ Physical Name     : /home/zhouchi/experiment/bin/findrange
+ SysInfo           : {arch=x86_64 os=LINUX instancetype=m1medium}
+ TYPE              : INSTALLED
+ Notifications:  
+2014.08.07 15:29:10.278 SGT: [CONFIG]  Pegasus Properties set by the user 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.replica=SimpleFile 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.replica.file=rc.dat 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.sit=XML3 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.site.file=sites.xml 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.transformation=Text 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.catalog.transformation.file=tc.dat 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.home.bindir=/home/zhouchi/pegasus-source-4.3.2/bin 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.home.schemadir=/home/zhouchi/pegasus-source-4.3.2/share/pegasus/schema 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.home.sharedstatedir=/home/zhouchi/pegasus-source-4.3.2/share/pegasus 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.home.sysconfdir=/home/zhouchi/pegasus-source-4.3.2/etc 
+2014.08.07 15:29:10.278 SGT: [CONFIG]  pegasus.selector.site=Deco 
+2014.08.07 15:29:10.284 SGT: [DEBUG]  Retrieving Metadata from the DAX file /home/zhouchi/experiment/pipe.dax 
+2014.08.07 15:29:10.289 SGT: [DEBUG]  DAXParser2 Version of DAX as picked up from the DAX 3.4 
+2014.08.07 15:29:10.289 SGT: [DEBUG]  DAXParser2 Picking schema for DAX /home/zhouchi/pegasus-source-4.3.2/share/pegasus/schema/dax-3.0.xsd 
+2014.08.07 15:29:10.289 SGT: [DEBUG]  DAXParser2 Picking up the dontTransfer and dontRegister flags false 
+2014.08.07 15:29:10.289 SGT: [INFO] event.pegasus.parse.dax dax.id /home/zhouchi/experiment/pipe.dax  - STARTED 
+2014.08.07 15:29:10.291 SGT: [INFO] event.pegasus.parse.dax dax.id /home/zhouchi/experiment/pipe.dax  (0.001 seconds) - FINISHED 
+2014.08.07 15:29:10.291 SGT: [DEBUG]  DAX Version as determined from DAX file 3.4 
+2014.08.07 15:29:10.291 SGT: [CONFIG]  DAX Parser Class to be loaded is DAXParser3 
+2014.08.07 15:29:10.294 SGT: [CONFIG]  Picking schema /home/zhouchi/pegasus-source-4.3.2/share/pegasus/schema/dax-3.3.xsd 
+2014.08.07 15:29:10.295 SGT: [INFO] event.pegasus.parse.dax dax.id /home/zhouchi/experiment/pipe.dax  - STARTED 
+2014.08.07 15:29:10.322 SGT: [DEBUG]  End of last element </adag> reached  
+2014.08.07 15:29:10.322 SGT: [INFO] event.pegasus.parse.dax dax.id /home/zhouchi/experiment/pipe.dax  (0.027 seconds) - FINISHED 
+2014.08.07 15:29:10.329 SGT: [DEBUG] dax.id<pipeline_0> -> job.id<preprocess_ID0000001,findrange_ID0000002,>
+2014.08.07 15:29:10.329 SGT: [DEBUG]  Directory to be created is /home/zhouchi/experiment/submit/zhouchi/pegasus/pipeline/run0019 
+2014.08.07 15:29:10.334 SGT: [CONFIG]  Metrics file will be written out to /home/zhouchi/experiment/submit/zhouchi/pegasus/pipeline/run0019/pipeline-0.metrics 
+2014.08.07 15:29:10.335 SGT: [INFO] event.pegasus.stampede.events dax.id pipeline_0  - STARTED 
+2014.08.07 15:29:10.371 SGT: [DEBUG]  Written out stampede events for the abstract workflow to /home/zhouchi/experiment/submit/zhouchi/pegasus/pipeline/run0019/pipeline-0.static.bp 
+2014.08.07 15:29:10.371 SGT: [INFO] event.pegasus.stampede.events dax.id pipeline_0  (0.036 seconds) - FINISHED 
+2014.08.07 15:29:10.373 SGT: [INFO] event.pegasus.refinement dax.id pipeline_0  - STARTED 
+2014.08.07 15:29:10.397 SGT: [CONFIG]  Proxy used for Replica Catalog is /tmp/x509up_u1001 
+2014.08.07 15:29:10.400 SGT: [DEBUG]  Setting property dagman.registration.maxjobs to 1 to set max jobs for registrations jobs category 
+2014.08.07 15:29:10.405 SGT: [DEBUG]  0 entries found in cache of total 1 
+2014.08.07 15:29:10.405 SGT: [DEBUG]  0 entries found in cache of total 1 
+2014.08.07 15:29:10.405 SGT: [INFO] event.pegasus.siteselection dax.id pipeline_0  - STARTED 
+2014.08.07 15:29:10.407 SGT: [DEBUG]  List of executions sites is [PegasusVM1, PegasusVM2] 
+2014.08.07 15:29:10.410 SGT: [DEBUG]  Site not associated with a gridgateway. Using default number of freenodes PegasusVM1 
+2014.08.07 15:29:10.410 SGT: [DEBUG]  Available nodes set for site PegasusVM1 10 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  Site not associated with a gridgateway. Using default number of freenodes PegasusVM2 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  Available nodes set for site PegasusVM2 10 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  Trying to get TCEntries for findrange on resource ALL of type ALL 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  current site is PegasusVM1 with sysinfo {arch=x86_64 os=LINUX instancetype=m1large} 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  current site is PegasusVM2 with sysinfo {arch=x86_64 os=LINUX instancetype=m1medium} 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  txsiteid is PegasusVM2txtype is INSTALLED 
+2014.08.07 15:29:10.411 SGT: [DEBUG]  Runnables sites for job findrange_ID0000002 [PegasusVM2] 
+2014.08.07 15:29:10.412 SGT: [DEBUG]  Fetching runtime information from profile VDS pegasus for job findrange_ID0000002 entry is 
+ 
+ Logical Namespace : null
+ Logical Name      : findrange
+ Version           : null
+ Resource Id       : PegasusVM2
+ Physical Name     : /home/zhouchi/experiment/bin/findrange
+ SysInfo           : {arch=x86_64 os=LINUX instancetype=m1medium}
+ TYPE              : INSTALLED
+ Notifications:  
+2014.08.07 15:29:10.412 SGT: [DEBUG]  Profiles are null 
+2014.08.07 15:29:10.412 SGT: [DEBUG]  mTCMapper edu.isi.pegasus.planner.catalog.transformation.mapper.All@bee95a 
+2014.08.07 15:29:10.412 SGT: [DEBUG]  Fetching runtime information from profiles for job [
+{Job Name -> findrange_ID0000002},
+{Logical Id -> ID0000002},
+{Transformation -> findrange},
+{Derivation -> null},
+{Level -> -1},
+{Job Type Description -> compute},
+{Job Id -> },
+{Runtime -> -1.0},
+{Executable -> },
+{Directory -> null},
+{Condor Universe -> compute},
+{Globus Scheduler -> },
+{Standard Output -> },
+{Standard Input -> },
+{Standard Error -> },
+{Argument String ->  -i  f.b1  -o  f.c1 },
+{Execution Site -> },
+{Staging Site -> null},
+{Globus RSL -> },
+{Environment Variables -> null},
+{Dagman Variables -> },
+{Hints -> },
+{Input Files  -> [
+ Logical Name :f.b1
+ Type         :data
+ Size         :-1.0
+ Transient Flags (transfer,optional,dontRegister,cleanup): ( 0,false,false,true)]},
+{Output Files  -> [
+ Logical Name :f.c1
+ Type         :data
+ Size         :-1.0
+ Transient Flags (transfer,optional,dontRegister,cleanup): ( 2,false,true,true)]},
+{Condor Variables
+ -> },
+{VDS Profiles -> },
+{Notifications -> },
+{Credentials -> []},] 
+2014.08.07 15:29:10.475 SGT: [DEBUG]  Sending Planner Metrics to [1 of 1] http://metrics.pegasus.isi.edu/metrics 
+2014.08.07 15:29:10.902 SGT: [DEBUG]  Metrics succesfully sent to the server 
+2014.08.07 15:29:10.903 SGT: [INFO] event.pegasus.siteselection dax.id pipeline_0  (0.498 seconds) - FINISHED 

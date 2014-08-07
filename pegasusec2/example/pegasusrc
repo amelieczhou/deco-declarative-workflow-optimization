@@ -1,0 +1,10 @@
+pegasus.catalog.replica=SimpleFile
+pegasus.catalog.replica.file=rc.dat
+
+pegasus.catalog.sit=XML3
+pegasus.catalog.site.file=sites.xml
+
+pegasus.catalog.transformation=Text
+pegasus.catalog.transformation.file=tc.dat
+
+pegasus.selector.site=Deco
